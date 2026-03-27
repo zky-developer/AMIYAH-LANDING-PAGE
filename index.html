@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Amiyah AI - Beta Access</title>
+    <link rel="icon" type="image/png" href="./logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .hide-scroll-bar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .hide-scroll-bar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-black text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-emerald-500/30">
+    
+    <!-- FULL SCREEN BACKGROUND SLIDER -->
+    <div class="fixed inset-0 z-0 w-full h-full overflow-hidden bg-black">
+        <div id="slider" class="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scroll-bar" style="scroll-behavior: smooth;">
+            <div class="snap-center shrink-0 w-full h-full relative">
+                <img src="./slide_1.jpeg" class="w-full h-full object-cover opacity-60 transform scale-105 transition-transform duration-[10s]" alt="Slide 1">
+            </div>
+            <div class="snap-center shrink-0 w-full h-full relative">
+                <img src="./slide_2.jpeg" class="w-full h-full object-cover opacity-60 transform scale-105 transition-transform duration-[10s]" alt="Slide 2">
+            </div>
+            <div class="snap-center shrink-0 w-full h-full relative">
+                <img src="./slide_3.jpeg" class="w-full h-full object-cover opacity-60 transform scale-105 transition-transform duration-[10s]" alt="Slide 3">
+            </div>
+        </div>
+        
+        <!-- Premium Vignette & Dark Gradient Overlay for perfect readability -->
+        <div class="absolute inset-0 w-full h-full bg-gradient-to-b from-black/80 via-black/40 to-black/90 pointer-events-none"></div>
+        <div class="absolute inset-0 w-full h-full shadow-[inset_0_0_80px_rgba(0,0,0,0.9)] md:shadow-[inset_0_0_200px_rgba(0,0,0,0.8)] pointer-events-none"></div>
+    </div>
+
+    <!-- MAIN WRAPPER TO PREVENT HORIZONTAL OVERFLOW -->
+    <div class="relative w-full overflow-x-hidden">
+        
+    <!-- TOP SECTION: HEADER & COPYWRITING -->
+    <main class="relative z-10 w-full min-h-[100dvh] flex flex-col justify-between px-6 py-10 md:py-16 mx-auto max-w-lg md:max-w-2xl">
+        
+        <!-- TOP SECTION: HEADER & COPYWRITING -->
+        <div class="flex flex-col items-center w-full">
+            <!-- Header Logo -->
+            <header class="w-full flex justify-center mb-8" data-aos="fade-down" data-aos-duration="1000">
+                <div class="flex items-center gap-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-2xl border border-white/10 shadow-lg">
+                    <img src="./logo.png" alt="Amiyah AI" class="w-7 h-7 object-contain drop-shadow-md">
+                    <span class="font-display font-bold text-xl tracking-tight text-white">Amiyah AI</span>
+                </div>
+            </header>
+
+            <!-- Copywriting Masterpiece -->
+            <div class="text-center w-full mt-2" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 shadow-[0_0_20px_rgba(16,185,129,0.2)] mb-5 backdrop-blur-md animate-pulse">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span class="text-[10px] sm:text-xs font-bold tracking-wide uppercase">STATUS: SERVER STANDBY — SISA 30 SLOT</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-display font-black text-white leading-[1.05] tracking-tighter mb-5 drop-shadow-2xl">
+                    Jangan Biarkan Anda Terdengar<br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Seperti Robot.</span>
+                </h1>
+                
+                <p class="text-slate-300 text-sm md:text-base max-w-md mx-auto leading-relaxed drop-shadow-md font-medium">
+                    Era terjemahan kaku telah berakhir. Amiyah AI membaca nada bicaramu, mengenali slang, dan menyambungkan emosimu layaknya warga lokal sungguhan.
+                </p>
+            </div>
+        </div>
+
+        <!-- BOTTOM SECTION: FLOATING STOPWATCH -->
+        <div class="flex flex-col items-center w-full" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="400">
+            
+            <!-- Tech Stopwatch Container -->
+            <div class="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center mb-6 mt-4">
+                
+                <!-- Ambient Glow Behind Stopwatch -->
+                <div class="absolute inset-0 rounded-full bg-emerald-500/20 blur-3xl animate-pulse-slow"></div>
+                
+                <!-- SVG Tech Tracks -->
+                <svg class="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 120 120">
+                    <!-- Background dashed track -->
+                    <circle cx="60" cy="60" r="56" stroke="currentColor" stroke-width="1.5" fill="transparent" class="text-white/10" stroke-dasharray="2 4" />
+                    <!-- Inner decorative track -->
+                    <circle cx="60" cy="60" r="48" stroke="currentColor" stroke-width="0.5" fill="transparent" class="text-emerald-400/30" stroke-dasharray="6 2" />
+                    <!-- Dynamic Progress Ring (Seconds) -->
+                    <circle id="progress-ring" cx="60" cy="60" r="56" stroke="currentColor" stroke-width="3" fill="transparent" class="text-emerald-400 transition-all duration-1000 ease-linear shadow-[0_0_15px_rgba(16,185,129,0.6)]" stroke-linecap="round" stroke-dasharray="351.858" stroke-dashoffset="0" />
+                </svg>
+
+                <!-- Inner Glass Core (The Timer) -->
+                <div class="relative z-10 flex flex-col items-center justify-center bg-black/50 backdrop-blur-xl rounded-full w-[230px] h-[230px] md:w-[290px] md:h-[290px] border border-white/20 shadow-[0_0_40px_rgba(0,0,0,0.8)]">
+                    <i data-lucide="timer" class="w-5 h-5 md:w-6 md:h-6 text-emerald-400 mb-2 md:mb-3 opacity-90 drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]"></i>
+                    
+                    <div class="flex items-center gap-2 md:gap-3 mt-1" id="countdown-container">
+                        <div class="flex flex-col items-center">
+                            <span class="text-5xl md:text-7xl font-display font-black text-white tracking-tighter tabular-nums drop-shadow-2xl" id="countdown-h">--</span>
+                            <span class="text-[9px] md:text-[11px] text-emerald-400/90 font-bold tracking-widest uppercase mt-1">Jam</span>
+                        </div>
+                        <span class="text-3xl md:text-4xl text-white/30 font-black mb-4 md:mb-5">:</span>
+                        <div class="flex flex-col items-center">
+                            <span class="text-5xl md:text-7xl font-display font-black text-white tracking-tighter tabular-nums drop-shadow-2xl" id="countdown-m">--</span>
+                            <span class="text-[9px] md:text-[11px] text-emerald-400/90 font-bold tracking-widest uppercase mt-1">Menit</span>
+                        </div>
+                        <span class="text-3xl md:text-4xl text-white/30 font-black mb-4 md:mb-5">:</span>
+                        <div class="flex flex-col items-center">
+                            <span class="text-3xl md:text-5xl font-display font-bold text-emerald-400 animate-pulse tabular-nums drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]" id="countdown-s">--</span>
+                            <span class="text-[9px] md:text-[11px] text-emerald-400/90 font-bold tracking-widest uppercase mt-1">Detik</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-[8px] md:text-[9px] font-bold text-emerald-200/70 uppercase tracking-[0.2em] mt-3 text-center leading-tight border-t border-white/10 pt-2 w-3/4">
+                        GERBANG BETA DIBUKA DALAM<br/>
+                        <span class="text-white text-[9px] tracking-widest mt-1 inline-block drop-shadow-md">29 MARET 00:00 WIB</span>
+                    </p>
+                </div>
+            </div>
+            
+            <p class="text-[9px] md:text-[10px] text-white/70 font-bold tracking-widest uppercase text-center max-w-xs mt-[-10px] mb-6 animate-pulse drop-shadow-md">
+                ⚠ Akses akan ditutup permanen setelah 30 pendaftar pertama masuk. Siapa cepat, dia dapat.
+            </p>
+
+            <!-- Dots Indicator Internal Logic & Z.K Management Attribution -->
+            <div class="flex flex-col items-center gap-4">
+                <div class="flex justify-center gap-2">
+                    <div class="w-2.5 h-2.5 rounded-full bg-emerald-400 transition-all duration-300 ring-4 ring-emerald-400/30 shadow-sm slider-dot" id="dot-0"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-white/30 backdrop-blur-sm transition-all duration-300 slider-dot" id="dot-1"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-white/30 backdrop-blur-sm transition-all duration-300 slider-dot" id="dot-2"></div>
+                </div>
+                <div class="inline-flex items-center gap-2 text-slate-400 opacity-80 backdrop-blur-sm bg-black/20 px-3 py-1 rounded-full border border-white/5">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                    <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-emerald-100/70">Support BY Z.K Management</span>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- CONTENT SECTIONS (SCROLLABLE OVER FIXED BACKGROUND) -->
+    <div class="relative z-20 bg-slate-50 rounded-t-[3rem] shadow-[0_-20px_50px_rgba(0,0,0,0.5)] w-full antialiased text-slate-900 border-t border-white/50 mt-10 md:mt-24">
+        
+        <!-- Manifesto & The Vision (New Section from IG) -->
+        <section class="py-20 px-6 max-w-4xl mx-auto border-b border-slate-200">
+            <div class="text-center" data-aos="fade-up">
+                <div class="mx-auto w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-6 border border-slate-200 shadow-sm">
+                    <i data-lucide="globe-2" class="w-8 h-8 text-emerald-500"></i>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-display font-black text-slate-900 mb-6 tracking-tight leading-tight">Sering merasa ide cemerlangmu mentok cuma gara-gara <span class="text-emerald-500">kendala bahasa?</span></h2>
+                <div class="space-y-4 text-slate-600 font-medium leading-relaxed max-w-2xl mx-auto text-lg">
+                    <p>Kita hidup di dunia yang serba terkoneksi, tapi miskomunikasi masih jadi masalah harian. Dari candaan yang gagal nyambung, sampai pesan penting di kantor yang maknanya berubah total gara-gara salah terjemah.</p>
+                    <p>Di lab kami, kami tidak mengajari Amiyah AI sekadar menghafal kamus. Kami mendidiknya <strong class="text-slate-800">"membaca ruangan"</strong>. Dari obrolan kasual bersama teman kampus di Timur Tengah, hingga negosiasi serius di meja bisnis.</p>
+                </div>
+                <!-- Brand Identity Mini-Block -->
+                <div class="mt-12 bg-white p-8 rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.03)] border border-slate-100 text-left flex flex-col md:flex-row items-center gap-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="shrink-0">
+                        <img src="./logo.png" alt="Amiyah AI Vision" class="w-24 h-24 object-contain filter drop-shadow-xl select-none">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Lebih Dari Sekadar Nama</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Di balik logo transparan kami, tertanam ribuan jam riset linguistik dan jutaan baris kode. Warna zamrud melambangkan kelancaran, dan desain transparannya menegaskan bahwa kami bergerak cepat di latar belakang—membebaskan Anda untuk berekspresi secara otentik.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section B: Feature Comparison (The Proof) -->
+        <section class="py-20 px-6 max-w-5xl mx-auto">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <div class="inline-block bg-slate-100 text-slate-500 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-4">Realita Lapangan</div>
+                <h2 class="text-3xl md:text-4xl font-display font-black text-slate-900 mb-4 tracking-tight">"Jika AI Anda Terdengar Seperti Mesin, Maka Ia Telah Gagal."</h2>
+                <p class="text-slate-500 max-w-lg mx-auto leading-relaxed">Pernah belajar bahasa Arab bertahun-tahun, tapi malah <i>"blank"</i> pas ngobrol dengan warga lokal? Itu karena mayoritas teknologi penerjemah cuma paham kamus, bukan makna.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Kiri: Robot Biasa -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200" data-aos="fade-up">
+                    <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center mb-6">
+                        <i data-lucide="bot" class="w-6 h-6 text-slate-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Terjemahan Biasa</h3>
+                    <ul class="space-y-3 text-slate-500 text-sm">
+                        <li class="flex gap-2 items-start"><i data-lucide="x" class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5"></i> Hanya menerjemahkan teks baku (kaku).</li>
+                        <li class="flex gap-2 items-start"><i data-lucide="x" class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5"></i> Gagal mengenali kalimat gaul/slang.</li>
+                        <li class="flex gap-2 items-start"><i data-lucide="x" class="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5"></i> Terdengar seperti turis atau robot.</li>
+                    </ul>
+                </div>
+
+                <!-- Kanan: Amiyah AI -->
+                <div class="bg-gradient-to-br from-emerald-500 to-teal-600 p-8 rounded-3xl shadow-xl border border-emerald-400 text-white relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 pointer-events-none">
+                        <i data-lucide="sparkles" class="w-32 h-32"></i>
+                    </div>
+                    <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-6 border border-white/30">
+                        <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Amiyah AI</h3>
+                    <ul class="space-y-3 text-emerald-50 text-sm relative z-10">
+                        <li class="flex gap-2 items-start"><i data-lucide="check" class="w-4 h-4 text-emerald-200 flex-shrink-0 mt-0.5"></i> Memahami konteks nyata dan emosi.</li>
+                        <li class="flex gap-2 items-start"><i data-lucide="check" class="w-4 h-4 text-emerald-200 flex-shrink-0 mt-0.5"></i> Menguasai bahasa jalanan yang natural.</li>
+                        <li class="flex gap-2 items-start"><i data-lucide="check" class="w-4 h-4 text-emerald-200 flex-shrink-0 mt-0.5"></i> Berbicara sangat luwes layaknya warga asli.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section C: The Killer Features (The Desire) -->
+        <section class="py-24 px-6 bg-white max-w-6xl mx-auto rounded-[3rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] border border-slate-100 my-10 relative overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent"></div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Fitur 1 -->
+                <div data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6">
+                        <i data-lucide="message-square-dashed" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3 tracking-tight">Paham Situasi & Konteks</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Lupakan terjemahan kaku. Amiyah membaca nada Anda, mengenali slang, dan memelihara konteks obrolan dari awal hingga akhir.</p>
+                </div>
+                <!-- Fitur 2 -->
+                <div data-aos="fade-up" data-aos-delay="150">
+                    <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mb-6">
+                        <i data-lucide="mic-2" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3 tracking-tight">Suara Bernyawa (TTS)</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Bukan sekadar suara robot. Dengarkan pelafalan dialek dengan intonasi penduduk lokal. Berbaur sempurna layaknya warga asli Jazirah Arab.</p>
+                </div>
+                <!-- Fitur 3 -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 relative">
+                        <i data-lucide="gamepad-2" class="w-7 h-7"></i>
+                        <span class="absolute -top-2 -right-2 bg-slate-800 text-white text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Coming Soon</span>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-slate-800 mb-3 tracking-tight">Modul Belajar Role-Play</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Berlatih menawar di pasar, menyapa klien, hingga obrolan santai via simulasi sapaan interaktif. Persiapan absolut untuk pekerja & mahasiswa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section D: Origin Story / Footer -->
+        <footer class="pt-24 pb-12 px-6 bg-slate-900 text-slate-100 text-center rounded-t-[3rem] relative overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent"></div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+            <div class="max-w-2xl mx-auto relative z-10">
+                <img src="./logo.png" alt="Amiyah AI" class="w-12 h-12 mx-auto mb-6 opacity-90 drop-shadow-lg">
+                <h2 class="text-2xl font-display font-bold text-white mb-4">Lahir dari Pengalaman Nyata</h2>
+                <p class="text-slate-400 text-sm leading-relaxed mb-10">
+                    Kami mendedikasikan platform ini karena kami tahu betapa sulitnya beradaptasi di Timur Tengah dengan bahasa asing yang tidak relevan dengan kehidupan sehari-hari (slang). Kini, miskomunikasi adalah masa lalu.
+                </p>
+                
+                <a href="#top" onclick="window.scrollTo(0, 0);" class="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                    KEMBALI KE ATAS
+                    <i data-lucide="arrow-up" class="w-4 h-4"></i>
+                </a>
+
+                <div class="mt-20 pt-8 border-t border-slate-800 text-slate-500 text-xs flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p>&copy; 2026 Amiyah AI. All rights reserved.</p>
+                    <div class="flex items-center gap-2 opacity-80">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                        <span class="font-bold uppercase tracking-widest text-[9px] text-emerald-50">Support BY Z.K Management</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Init AOS Animation with strict settings to avoid masking full-screen bugs
+        setTimeout(() => {
+            AOS.init({
+                once: true,
+                offset: 10,
+                easing: 'ease-out-cubic',
+            });
+        }, 100);
+
+        // --- IMAGE CAROUSEL LOGIC ---
+        const slider = document.getElementById("slider");
+        const dots = document.querySelectorAll(".slider-dot");
+        const slideCount = dots.length;
+        
+        // Auto Slide Logic
+        let currentSlide = 0;
+        let slideInterval = setInterval(() => {
+            currentSlide = (currentSlide + 1) % slideCount;
+            slider.scrollTo({
+                left: currentSlide * slider.clientWidth,
+                behavior: 'smooth'
+            });
+        }, 4000); // Ganti gambar tiap 4 detik
+
+        slider.addEventListener("scroll", () => {
+            let activeIndex = Math.round(slider.scrollLeft / slider.clientWidth);
+            currentSlide = activeIndex; // Sinkronisasi manual scroll dengan auto-slide
+            
+            dots.forEach((dot, index) => {
+                if(index === activeIndex) {
+                    dot.classList.add("bg-emerald-400", "ring-4", "ring-emerald-400/30");
+                    dot.classList.remove("bg-white/30", "backdrop-blur-sm");
+                } else {
+                    dot.classList.remove("bg-emerald-400", "ring-4", "ring-emerald-400/30");
+                    dot.classList.add("bg-white/30", "backdrop-blur-sm");
+                }
+            });
+        });
+
+        // --- EXACT ABSOLUTE LAUNCH TIME LOGIC ---
+        // Target: 29 March 2026, 00:00:00 WIB (Asia/Jakarta is GMT+0700)
+        // ISO Format: YYYY-MM-DDTHH:mm:ss+07:00
+        const launchDate = new Date("2026-03-29T00:00:00+07:00").getTime();
+        
+        const hEl = document.getElementById("countdown-h");
+        const mEl = document.getElementById("countdown-m");
+        const sEl = document.getElementById("countdown-s");
+        const progressRing = document.getElementById("progress-ring");
+        const radius = 56; // hardcoded based on SVG r
+        const circumference = 2 * Math.PI * radius; // ~351.858
+
+        progressRing.style.strokeDasharray = `${circumference} ${circumference}`;
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            if (distance <= 0) {
+                // If the launch time has already passed
+                hEl.innerText = "00";
+                mEl.innerText = "00";
+                sEl.innerText = "00";
+                progressRing.style.strokeDashoffset = 0;
+                document.querySelector('#countdown-container').classList.add('text-emerald-400');
+                // You can trigger a redirect or show "BETA IS LIVE" here!
+                return;
+            }
+
+            // Calculate exact hours, minutes, and seconds remaining
+            const hours = Math.floor(distance / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Format to ensure 2 digits (e.g., 09 or 45)
+            const formattedHours = hours.toString().padStart(2, '0');
+            const formattedMins = minutes.toString().padStart(2, '0');
+            const formattedSecs = seconds.toString().padStart(2, '0');
+
+            hEl.innerText = formattedHours;
+            mEl.innerText = formattedMins;
+            sEl.innerText = formattedSecs;
+
+            // Make the circular progress map to the 60 seconds loop (to look like an active tech stopwatch)
+            // 60 seconds = 1 full lap. Dashoffset 0 means full ring.
+            const progress = ((60 - seconds) / 60) * circumference;
+            progressRing.style.strokeDashoffset = progress;
+        }
+
+        // Run instantly then update every 1 second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+    </script>
+    </div> <!-- END MAIN WRAPPER -->
+</body>
+</html>
